@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesterweb Pubmats</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="https://yesterweb.org/img/laptop.gif" type="image/gif" />
+    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+    <div class="headbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo"></a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/community/">Community</a></li>
+                <li><a href="https://links.yesterweb.org/">Links <img src="https://sadgrl.online/images/pixels/new.gif"></a></li>
+                <li><a href="/zine/">Zine</a></li>
+                <li><a href="/webring/">Webring</a></li>
+                <li><a href="/radio/">Radio</a></li>
+                <li><a href="/manifesto/">Manifesto</a></li>
+                <li><a href="/bb/">Bulletin Board</a></li>
+                <li><a href="/graphics/pubmats.html">Pubmats</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="content">
+                <header>
+                    <h1>Pubmats</h1>
+                </header>
+                <p>Pubmats are publication materials, and in this case, they're meant to be freely shared on social media platforms to show people on social media what they're missing out on, that more exists, that they can create their own space on their own terms.
+
+                    <p>Credit for each item is provided below, but credit is not needed to share elsewhere. If you'd like to submit to the gallery, you can do so <a href="https://forms.yesterweb.org/index.php/922467" target="_blank">here</a></p>
+
+                    <div class="gallery">
+                        <div>
+                            <figure>
+                                <a href="https://paintkiller.neocities.org/03_15_2022.html" target="_blank">
+                                    <img src="/img/graphics/paintkiller.jpg">
+                                </a>
+                                <figcaption><a href="https://paintkiller.neocities.org/03_15_2022.html" target="_blank">by paintkiller</a></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <a href="https://nuclerosea.neocities.org" target="_blank">
+                                    <img src="/img/graphics/smallwebprofits.png">
+                                </a>
+                                <figcaption><a href="https://nuclerosea.neocities.org" target="_blank">by mal</a></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <a href="https://nuclerosea.neocities.org" target="_blank">
+                                    <img src="/img/graphics/itdoesnthavetobelikethis.png">
+                                </a>
+                                <figcaption><a href="https://nuclerosea.neocities.org" target="_blank">by mal</a></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <a href="https://softannalee.neocities.org/" target="_blank">
+                                    <img src="/img/graphics/softannalee.png">
+                                </a>
+                                <figcaption><a href="https://softannalee.neocities.org/" target="_blank">by softannalee</a></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <details>
+                                    <summary>
+                                        <img src="/img/graphics/beyond-webcore/1.png">
+                                    </summary>
+                                    <div class="expanded">
+                                        <img src="/img/graphics/beyond-webcore/2.png"> <img src="/img/graphics/beyond-webcore/3.png"> <img src="/img/graphics/beyond-webcore/4.png"> <img src="/img/graphics/beyond-webcore/5.png"> <img src="/img/graphics/beyond-webcore/6.png">
+                                    </div>
+
+                                </details>
+                                <figcaption><a href="https://ryanvastrecs-yesterweb.glitch.me/" target="_blank">by ryan</a><br> (click image to expand all images)</a></figcaption>
+                            </figure>
+                        </div>
+                        <div>
+                            <figure>
+                                <a href="https://dagranddragonn.neocities.org/MainPages/Socials.html" target="_blank">
+                                    <img src="/img/graphics/dagranddragonn.png">
+                                </a>
+                                <figcaption><a href="https://dagranddragonn.neocities.org/MainPages/Socials.html" target="_blank">by dagranddragonn</a></figcaption>
+                            </figure>
+                        </div>
+                        </header>
+
+                    </div>
+            </div>
+        </main>
+    </div>
+    <style>
+        .expanded {
+            max-width: 300px;
+        }
+
+        summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        figure {
+            margin: 10px;
+        }
+
+        .gallery {
+            /* this is the main div that wraps your gallery */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            /* this sets the width for every image */
+            height: 300px;
+            /* this sets the height for every image. Try setting it to 'auto' and see how it looks weird since every image has a slightly different height? */
+            object-fit: cover;
+            /* this crops the image so they are all the same size. This might be an issue if you have landscape AND portrait images. Feel free to take this property out temporarily to see exactly what it does! */
+
+        }
+
+        /* this is the div which CROPS every image */
+        .gallery>figure {
+            width: 200px;
+            /* this should match the image height */
+            height: 150px;
+            /* this should match the image width */
+            margin-right: 10px;
+            /* this controls the gaps between the images */
+            margin-bottom: 10px;
+            /* this controls the gaps between the images */
+        }
+
+        /* this resizes the image on hover. note that objects in 'portrait'  */
+        .gallery img:hover {
+            transform: scale(1.5);
+            /* this scales up the image when you hover over it */
+            object-fit: contain;
+            /* this keeps the aspect ratio of the original images*/
+        }
+    </style>
+
+</body>
+
+</html>

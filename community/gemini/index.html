@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" href="/img/laptop.gif" type="image/gif" />
+    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+    <div class="headbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo"></a>
+        </div>
+    </div>
+
+    <div class="flex">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/community/">Community</a></li>
+                <li><a href="https://links.yesterweb.org/">Links <img src="https://sadgrl.online/images/pixels/new.gif"></a></li>
+                <li><a href="/zine/">Zine</a></li>
+                <li><a href="/webring/">Webring</a></li>
+                <li><a href="/radio/">Radio</a></li>
+                <li><a href="/manifesto/">Manifesto</a></li>
+                <li><a href="/bb/">Bulletin Board</a></li>
+                <li><a href="/graphics/pubmats.html">Pubmats</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article class="content">
+                <header>
+                    <h1>Gemini</h1>
+                </header>
+                <strong>What is Gemini?</strong>
+                <p>Gemini is a webspace that exists on a protocol other than http. This means you need a special browser to view websites hosted on Gemini. There are other protocols like Gemini that you may have heard of, such as Gopher and Finger. Many refer to these spaces as the "smallweb", and essentially are stripped-down text-based websites. </p>
+                <strong>What can I do on Gemini?</strong>
+                <p>On Gemini, you can create your own text-only website, called a <strong>capsule</strong>. You can put whatever you like on there, and share it with others who use Gemini. You can also read other people's websites, and 'surf' by clicking links, much like the old web.</p>
+
+                <strong>How can I view Gemini capsules?</strong>
+                <p>You will need a Gemini browser. Some good suggestions are <a href="https://github.com/skyjake/lagrange/releases/tag/v1.9.3" target="_blank">Lagrange</a> (Linux/Mac/Win) or check the clients list <a href="https://gemini.circumlunar.space/clients.html" target="_blank">here</a>. Don't want to install a whole browser? You can use a <a href="https://yesterweb.org/gemini.html" target="_blank">web proxy</a> to view sites or just browse, but you won't be able to edit your site this way. </p>
+
+                <strong>How do I make my own Gemini capsule?</strong>
+                <p>You can sign up by accessing this webpage from a Gemini-compatible browser: <strong>gemini://cities.yesterweb.org/signup</strong>. You can enter your desired username and password, which you will need to edit your site.</strong></p>
+
+                <strong>How do I edit or upload to my Gemini capsule?</strong>
+                <p>Gemini pages are text files saved with the <strong>.gmi</strong> extension. You can upload your files using a browser at <strong>gemini://cities.yesterweb.org/filemanager</strong>. Otherwise, you'll need file management program with WebDAV support. Some recommendations are <a href="https://winscp.net/eng/index.php" target="_blank">WinSCP</a> or <a href="https://www.putty.org/" target="_blank">PuTTY</a> for Windows. If you're on Mac or Linux, you can make a connection to the server right from your file manager. On Linux, it's <strong>File > Connect to Server</strong> and on Mac it's <strong>Go > Connect to Server</strong>. You can find <a href="https://gemini.yesterweb.org/welcome.gmi" target="_blank">instructions here</a> for the correct hostname and port. Once you make a connection, your 'homepage' will be a file named index.gmi. You can create folders and more .gmi files as additional pages.</p>
+
+                <strong>How can I add a guestbook to my Gemini capsule?</strong>
+                <p>You can use the <strong>{{GUESTBOOK}}</strong> command to display your guestbook comments wherever you like.</p>
+                <p>Then, create a link to: <em>gemini://cities.yesterweb.org/guestbook/USERNAME</em> making sure to replace your username in the link.</p>
+
+
+                <strong>How do you format text on Gemini?</strong>
+                <p>Gemini formatting is called "gemtext" markup. You can find a complete guide <a href="https://gemini.circumlunar.space/docs/gemtext.gmi" target="_blank">here</a> or use the quick guide below.</p>
+
+                <div class="guide">
+                    <strong>Links</strong>
+                    <div class="code">
+                        => gemini://cities.yesterweb.org<br>
+                        => https://yesterweb.org
+
+                    </div>
+                    <strong>Headings</strong>
+                    <div class="code">
+                        # Heading <br>
+                        ## Sub-heading <br>
+                        ### Sub-sub-heading
+                    </div>
+
+                    <strong>Lists</strong>
+                    <div class="code">
+                        * Item<br>
+                        * Item<br>
+                        * Item<br>
+                    </div>
+                    <strong>Quotes</strong>
+                    <div class="code">
+                        > This is a quote.
+                    </div>
+                    <strong>Preformatted</strong>
+                    <div class="code">```This is preformatted text.```</div>
+                </div>
+            </article>
+        </main>
+
+    </div>
+</body>
+<style>
+    .code {
+        font-family: monospace;
+        padding: 10px;
+    }
+
+    .padding>strong {
+        color: var(--readable-bluish);
+    }
+</style>
+</body>
+
+</html>

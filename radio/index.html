@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yesterweb Live Radio</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://yesterweb.org/img/laptop.gif" type="image/gif" />
+    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+    <div class="headbar">
+        <div class="logo">
+            <a href="/"><img src="/img/logo.svg" alt="Yesterweb logo"></a>
+        </div>
+    </div>
+    <div class="flex">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/community/">Community</a></li>
+                <li><a href="https://links.yesterweb.org/">Links <img src="https://sadgrl.online/images/pixels/new.gif"></a></li>
+                <li><a href="/zine/">Zine</a></li>
+                <li><a href="/webring/">Webring</a></li>
+                <li><a href="/radio/">Radio</a></li>
+                <li><a href="/manifesto/">Manifesto</a></li>
+                <li><a href="/bb/">Bulletin Board</a></li>
+                <li><a href="/graphics/pubmats.html">Pubmats</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content">
+                <header>
+                    <h1>Yesterweb Live Radio</h1>
+                </header>
+                <div class="onAir"><img src="https://yesterweb.org/img/on-air.gif"></div>
+                <img src="https://yesterweb.org/img/radio.gif" align="right">
+
+
+                <p class="notice">Do you make music or know someone who does, who might like to submit their music to be on our live radio? Fill out <a href="https://forms.yesterweb.org/index.php/451443?lang=en" target="_blank">this form.</a></p>
+                <p>The Yesterweb Live Radio is a radio that focuses on showcasing independent music, interviews and talk shows! For more information about this radio station, drop by our <a href="/community/">Discord server</a>!</p>
+
+
+                <p>You can listen to <a href="https://radio.yesterweb.org/public/1/podcast/1ec91d1a-44c0-6090-9ff3-8731e65c5c4a/episodes">podcasts</a> from the radio as well!</p>
+                <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+                <script src="https://hosted.muses.org/mrp.js"></script>
+                <script>
+                    MRP.insert({
+                        'url': 'https://radio.yesterweb.org/radio/8000/radio.mp3',
+                        'codec': 'mp3',
+                        'volume': 100,
+                        'autoplay': false,
+                        'jsevents': true,
+                        'buffering': 0,
+                        'title': 'Yesterweb Live Radio',
+                        'wmode': 'transparent',
+                        'skin': 'bintang',
+                        'width': 300,
+                        'height': 113
+                    });
+                </script>
+                <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+                <div class="np">
+
+                    <section class="now-playing" id="main" ng-app="app" ng-controller="MainController as vm">
+                        <h4>Now Playing:</h4>
+                        <marquee>
+                            <div class="display"></div>
+                        </marquee>
+                    </section>
+                    <noscript>Javascript is required to view the "now playing" data.</noscript>
+                </div>
+
+                <!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->
+                <p><strong>Direct stream:</strong> <a href="https://radio.yesterweb.org/radio/8000/radio.mp3" target="_blank">Link</a></p>
+                <p><strong>Media players:</strong> <a href="https://www.muses.org/setup" target="_blank">Link</a></p>
+
+                <h2>Yesterweb Radio Chat</h2>
+                <iframe src="https://yesterweb.ishoutbox.com" width="600" height="450"></iframe>
+            </div>
+        </main>
+    </div>
+    <script>
+        setInterval(getMetaData, 500);
+
+        function getMetaData() {
+            $.ajax({
+                type: "GET",
+                url: "https://radio.yesterweb.org/api/nowplaying/yesterweb_live_radio",
+                dataType: "json",
+                success: function(result, status, xhr) {
+                    //console.log('success');
+                    $('.display').html(result["now_playing"]["song"]["title"] + " - " + result["now_playing"]["song"]["artist"]);
+                },
+                error: function(xhr, status, error) {
+                    //console.log(status);
+                    //console.log(error);
+                }
+            });
+        }
+    </script>
+    <style>
+        iframe {
+            border: none;
+        }
+
+        #MusesRadioPlayer-HTML5-player-0 {
+            margin: 0 auto;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+# ignore zine
+zine/
+
+# ignore yesterbowl
+yesterbowl/
+
+# ignore redirects
+portal.html
+
+#ignore folders
+videos/
+links/
+img/
+fonts/
+ext/

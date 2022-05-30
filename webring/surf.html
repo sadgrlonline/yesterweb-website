@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surf the Yesterweb</title>
+    <link rel="icon" href="/img/laptop.gif" type="image/gif" />
+    <script type="text/javascript" src="webring.json"></script>
+    <script
+      data-goatcounter="https://yesterweb.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+    <script>
+      function myFunction() {
+        fetch("https://webring.yesterweb.org/webring.json")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            // this returns the URL of the first site in webrings.JSON
+            var webringLength = data.length;
+            var positionInRing = 0;
+            var nextFrame = document.getElementById("next");
+            var prevFrame = document.getElementById("prev");
+            var randomNess = document.getElementById("rand");
+            var iFrame = document.getElementById("framey");
+            var totalSites = webringLength;
+
+            nextFrame.addEventListener("click", () => {
+              //console.log("clicks are " + clicks);
+              //console.log("webringLength is " + webringLength);
+              if (positionInRing > webringLength - 3) {
+                positionInRing = 0;
+                console.log("next positionInRing: +=1 true " + positionInRing);
+                iFrame.src = data[positionInRing].url;
+                positionInRing += 1;
+              } else {
+                positionInRing += 1;
+                console.log("next positionInRing: false " + positionInRing);
+                iFrame.src = data[positionInRing].url;
+                // (console.log(iFrame.src));
+                // console.log("clicks +=1 " + clicks);
+              }
+            });
+
+            var prevClicks = positionInRing;
+
+            // take webring length and count down
+
+            prevFrame.addEventListener("click", () => {
+              //console.log("Position: " + positionInRing);
+              if (positionInRing === 0) {
+                positionInRing = webringLength; // length is currently 13 with a zero index
+                positionInRing--;
+                iFrame.src = data[positionInRing].url;
+                //console.log("prev positionInRing: true " + positionInRing);
+              } else {
+                positionInRing--;
+                iFrame.src = data[positionInRing].url;
+                // console.log("working");
+                // console.log("prev positionInRing: false " + positionInRing);
+              }
+            });
+
+            rand.addEventListener("click", () => {
+              // console.log("yay!");
+              webringLength -= 1;
+              var siteNumbers = new Array(webringLength);
+
+              // console.log(siteNumbers);
+              const randomElement = Math.floor(
+                Math.random() * siteNumbers.length
+              );
+              //  console.log(randomElement);
+              iFrame.src = data[randomElement].url;
+            });
+          });
+      }
+      myFunction();
+    </script>
+  </head>
+  <body>
+    <div class="webring">
+      <div class="icon"></div>
+      <div id="copy">
+        <h1>Yesterweb Ring</h1>
+        <p>
+          This site,
+          <a href="https://yesterwebring.neocities.org/"> Yesterweb Ring </a> is
+          keeping the old web alive. Thanks, Yesterweb Collective !
+        </p>
+        <p id="nav">
+          <a id="prev" href="#">[Prev]</a>
+          <a id="rand" href="#">[???]</a>
+          <a id="next" href="#">[Next]</a><br /><br /><br />
+          <a style="font-size: 15px" href="https://yesterwebring.neocities.org/"
+            >[Home]</a
+          >
+          <a
+            style="font-size: 15px"
+            href="https://yesterwebring.neocities.org/members.html"
+            >[Members]</a
+          >
+        </p>
+      </div>
+      <div class="icon"></div>
+    </div>
+    <iframe
+      id="framey"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+      src="https://yesterwebring.neocities.org/surfyesterweb.html"
+      name="name"
+    ></iframe>
+  </body>
+  <style>
+    @font-face {
+      font-family: Monster;
+      src: url(https://yesterwebring.neocities.org/fonts/MonsterFriendFore.woff);
+    }
+    @font-face {
+      font-family: Minecraftia;
+      src: url(https://yesterwebring.neocities.org/fonts/Minecraftia-Regular.woff);
+    }
+
+    body,
+    html {
+      margin: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 900px;
+    }
+    .webring {
+      background-image: url("https://sadhost.neocities.org/images/tiles/gridnew.gif");
+      border: 3px double limegreen;
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+    }
+    #copy h1 {
+      font-size: 30px;
+      line-height: 20px;
+      letter-spacing: 2px;
+    }
+    #copy {
+      font-family: "Minecraftia";
+      font-size: 8px;
+      line-height: 12px;
+      z-index: 200;
+    }
+    #copy a {
+      color: limegreen;
+      text-decoration: none;
+    }
+    .icon {
+      font-size: 100px;
+    }
+    #nav {
+      font-size: 20px;
+      margin-top: 25px;
+    }
+  </style>
+</html>

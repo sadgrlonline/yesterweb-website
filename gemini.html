@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta property="og:url" content="https://yesterweb.org/gemini.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Yesterweb Gemini Portal" />
+    <meta property="og:description" content="A way to browse gemini:// sites over https://" />
+    <meta property="og:image" content="https://yesterweb.org/img/og/portal-ss.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <h2>Gemini Portal</h2>
+        <div class="center">
+            Type any gemini:// domain below!<br>
+            <input id="url" type="text" placeholder="gemini://cities.yesterweb.org/"></input><button type="submit" id="submit">go</button>
+        </div>
+        </div>
+        <iframe id="gemini" src="https://gemini.yesterweb.org/"></iframe>
+        </div>
+        <style>
+            :root {
+                --bg-color: #000000;
+                --text-color: #ffffff;
+                --font-size: 12px;
+            }
+
+            body {
+                font-family: 'courier new';
+                max-width: 100%;
+                color: white;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-size: var(--font-size);
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            .color {
+                border: none;
+                border-color: transparent;
+            }
+
+            input::-webkit-color-swatch {
+                border: transparent;
+            }
+
+            pre {
+                background-color: var(--bg-color);
+            }
+
+            ::-moz-color-swatch {
+                border-color: transparent;
+            }
+
+            label {
+                font-size: 11px;
+            }
+
+            iframe {
+                height: 821px;
+                width: 100%;
+                border: none;
+            }
+
+            input[type='text'] {
+                background-color: #1e1e1e;
+                color: white;
+                height: 20px;
+                width: 400px;
+                font-family: 'Courier New';
+                display: inline;
+
+            }
+
+            input[type='color'] {
+                width: 50px;
+                border: none;
+            }
+
+            input[type='range'] {
+                width: 50px;
+                border: none;
+            }
+
+            #submit {
+                background-color: black;
+                color: white;
+                height: 34px;
+                width: 40px;
+                display: inline;
+                border: 1px solid white;
+            }
+
+            .styling {
+                display: flex;
+                flex-wrap: wrap;
+                float: right;
+            }
+
+            .center {
+                width: 480px;
+                margin: 0 auto;
+                padding-top: 10px;
+
+            }
+        </style>
+        <script>
+            var button = document.getElementById('submit');
+            var url = document.getElementById('url');
+            var iframe = document.getElementById('gemini');
+
+            console.log(button);
+
+            button.addEventListener('click', myFunction);
+
+            $('#url').on("focus", function() {
+                console.log('test');
+                $(document).on('keypress', function(event) {
+                    console.log(event.keycode);
+                    if (event.which == 13) {
+                        myFunction();
+                    }
+                })
+
+            })
+
+            function myFunction() {
+                var fullURL = url.value;
+                var trimmedURL = fullURL.replace("gemini://", "");
+                console.log(trimmedURL)
+                iframe.src = 'https://gemini.yesterweb.org/proxy/' + trimmedURL;
+
+                //newUrl = 'https://gemini.yesterweb.org/proxy/' + url.value;
+                //console.log(newUrl);
+            }
+        </script>
+</body>
+
+</html>
