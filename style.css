@@ -348,15 +348,6 @@ hr {
 }
 
 
-@media only screen and (max-width: 1000px) {
-    .container {
-        flex-wrap: wrap;
-    }
-
-}
-
-
-
 @media only screen and (max-width: 981px) {
 
     #buttons {
@@ -383,30 +374,41 @@ hr {
         max-width: 100% !important;
     }
 
-    nav {
-        justify-content: center;
 
-    }
 
-    .headbar {
+    nav .headbar {
         margin-left: 0;
         padding-left: 0;
     }
 
-    nav {
-        width: 100%;
+    .headbar {
+        display: none;
     }
 
     nav {
+        justify-content: center;
+        max-width: 100%;
         margin-left: 0;
+        background-color: #56289B;
         width: 100%;
+        padding-bottom: 30px;
+        padding-left: 0px;
+    }
+
+    h1 {
+        margin: 0;
+        padding-top: 30px;
+
     }
 
     nav ul {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
-    .content {
+    main {
         max-width: 100%;
         margin-right: 0;
     }
@@ -419,45 +421,6 @@ hr {
 
     .logo img {
         max-width: 100%;
-    }
-
-    /* possible future ...
-
-    .headbar {
-        order: 1;
-    }
-
-    .container {
-        order: 2;
-    }
-
-    nav {
-        order: 4;
-    }
-
-    */
-
-    .padding {
-        padding: 40px;
-        padding-top: 10px;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    #updates,
-    .updates {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .right-sidebar {
-        width: 100% !important;
-    }
-
-    .scontent {
-        display: flex;
     }
 
     .homepage-content {
@@ -474,18 +437,6 @@ hr {
     nav ul li a {
         padding-left: 20px;
     }
-
-
-
-    .content {
-        padding: 0px;
-        margin-left: 0 !important;
-    }
-
-    .container {
-        flex-wrap: wrap;
-    }
-
 
 
     #updates {
