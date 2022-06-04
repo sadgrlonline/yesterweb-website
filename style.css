@@ -66,32 +66,13 @@ body a {
 
 /* homepage */
 
-.news {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-}
 
-.news>div {
-    max-width: 250px;
-    padding: 15px;
-}
 
 .news>div>.st {
-    height: 50px;
     color: var(--green);
 }
 
-.news>div>div {
-    height: 200px;
-}
 
-.icon {
-    width: 150px;
-
-}
 
 /* general usage, probably shouldn't change */
 
@@ -195,6 +176,7 @@ h1 {
     font-weight: bold;
     font-family: 'Technique';
     color: var(--readable-bluish);
+    padding-bottom: 25px;
 }
 
 h2 {
@@ -417,6 +399,10 @@ hr {
     body {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .content {
+        padding: 10px;
     }
 
     .logo img {
