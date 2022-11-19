@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yesterweb - Trick or Treat 2022</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" href="/img/laptop.gif" type="image/gif" />
+    <meta property="og:url" content="https://yesterweb.org/trickortreat2022" />
+    <meta property="twitter:card" content="summary_large_image">
+    <script data-goatcounter="https://yesterweb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+    <div class="panel">
+        <img src="https://sadhost.neocities.org/images/halloween/web.png" style="top:0; left:0; height:100%;">
+        <img src="https://sadhost.neocities.org/images/halloween/bigpurple.gif" style="width:55px; left:200px;">
+        <img src="https://sadhost.neocities.org/images/halloween/vampire1.gif" style="right:20px;">
+        <img src="https://sadhost.neocities.org/images/halloween/toon-bat.gif" style="left:300px; top:50px;">
+        <img src="https://64.media.tumblr.com/d0f0f98a6bddb9a894db2964b00d8f34/tumblr_inline_mu7v69gx861r37k2u.gif" style="left:50px;">
+
+        <div class="box">
+
+            <button id="surfButton">TREAT</button>
+            <button id="trickButton">TRICK</button>
+
+        </div>
+        Click <a href="#" id="link" target="_blank">here</a> to open this site in a new tab.
+
+        <div class="player">
+            <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+            <script type="text/javascript">
+                MRP.insert({
+                    'url': 'https://radio.yesterweb.org/radio/8000/radio.mp3',
+                    'codec': 'mp3',
+                    'volume': 100,
+                    'autoplay': false,
+                    'jsevents': true,
+                    'buffering': 0,
+                    'title': 'Yesterweb Radio',
+                    'wmode': 'transparent',
+                    'skin': 'substream',
+                    'width': 180,
+                    'height': 30
+                });
+            </script>
+        </div>
+    </div>
+    <!-- put whatever site you want to start with here -->
+    <div id="startingDiv">
+
+    </div>
+    <div id="viewport-outer">
+        <iframe id="viewport" src="https://sadhost.neocities.org/halloween/trick-or-treat-intro.html"></iframe>
+    </div>
+    <style>
+        @font-face {
+            font-family: CFHalloween;
+            src: url(https://sadhost.neocities.org/fonts/CFHalloween-Regular.ttf);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            font-family: sans-serif, 'sans-serif';
+        }
+
+        #MusesRadioPlayer-HTML5-player-0 {}
+
+        .panel {
+            width: 100%;
+            background-color: black;
+            color: white;
+            height: 155px;
+            background-image: url('https://sadhost.neocities.org/images/tiles/ghosts.png');
+            background-size: 10%;
+            position: relative;
+            border-bottom: 10px ridge orange;
+            text-align: center;
+        }
+
+        .panel img {
+            position: absolute;
+        }
+
+        .panel .box {
+            width: 120px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .panel a {
+            color: orange;
+        }
+
+        .panel .box button {
+            width: 100%;
+            font-size: 30px;
+            font-family: 'CFHalloween';
+        }
+
+        .panel p {
+            text-align: center;
+        }
+
+        .player {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        iframe#viewport {
+            width: 100%;
+            height: 1200px;
+        }
+
+        #surfButton {
+            background-color: orange;
+            border: 1px solid black;
+        }
+
+        #trickButton {
+            display: none;
+            background-color: black;
+            color: orange;
+            border: 1px solid orange;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .panel img {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        var myURLs;
+
+
+        // this makes sure the URL list is ready to go
+        (function() {
+            generateRandomList();
+        })();
+
+
+        function generateRandomList() {
+            // here is where you add the URLs you want!!
+            myURLs = [
+                "https://whiteheartrainbowsoul.neocities.org/spookyseason.html",
+                "https://punc.neocities.org/punkoween.html",
+                "https://web.archive.org/web/20221027191340/https://vincentsdungeon.com/halloween/",
+                "https://turret.neocities.org/Classic/",
+                "https://fr1234.neocities.org/halloween.html",
+                "https://scumsuck.com/goblinhole/",
+                /* "https://44nifty.com/tricktreat.html", */
+                "https://manpaint.neocities.org/library/halloween.html",
+                "https://atomicgothic.neocities.org/atomic%20gothic%20test/peepthehorror.html",
+                "https://critterprincetoys.neocities.org/halloween.html",
+                "https://xyzzyzzyzx.xyz/halloween.html",
+                "https://mothcore.neocities.org/pages/foryou/trickortreat2022.html",
+                "https://paintkiller.neocities.org/new/haloween2022.html",
+                "https://choiyoona.neocities.org/halloween.html",
+                "https://redrevelry.neocities.org/halloween/halloween.html",
+                "https://neonriser.neocities.org/samhain/index.html",
+                /* "https://brainunits.neocities.org/Halloween.html", */
+                "https://onlywonder.neocities.org/holiday/halloween22/index.html",
+                "https://psi-trance.neocities.org/hallowedeve.html",
+                "https://creaturefeature.neocities.org/misc/halloween.html",
+                "https://kreepykeys.neocities.org/",
+                "https://kitecreature.net/halloween/",
+                "https://transrats.neocities.org/click/halloween.html",
+                "https://ollie-ollieverio.neocities.org/Haloween/trashzone-haloween-special.html",
+                "https://artwork.neocities.org/halloween.html",
+                "https://expectationemesis.neocities.org/holiday/halloween2022.html",
+                "https://vencake.neocities.org/halloween.htm",
+                "https://frogpondblues.neocities.org/halloween/halloween.html",
+                "https://dogfish99.neocities.org/morscertissima.html",
+                "https://subspacenate.neocities.org/spooky.html",
+                "https://humanfinny.neocities.org/coolstuff/coolstuffentry12/coolstuffentry12.html",
+                "https://hollymacycomic.com/secret_halloween.html",
+                "https://blissnet.neocities.org/holiday/Hallozine2022/index.html",
+                "https://cinni.net/halloween.html",
+                "https://773tk.neocities.org/halloween-games.html",
+                "https://gloomlee.neocities.org/trickortreat.html",
+                "https://castlecyberskull.neocities.org/",
+                "https://lophius.xyz/halloween2022.html",
+                "https://xn--xl-f18h.neocities.org/halloween/index.html",
+                "https://doctordizzy.neocities.org/halloween/",
+                "https://blinkies.cafe/halloween",
+                "https://sadhost.neocities.org/halloween/trick-or-treat.html"
+            ];
+            randomizedURLs = [];
+            console.log(myURLs);
+            var j = 0;
+
+            // generates random URLs
+            function genRandomList(length, randomizedURLs) {
+                while (length--) {
+                    j = Math.floor(Math.random() * (length + 1));
+                    randomizedURLs.push(myURLs[j]);
+                    myURLs.splice(j, 1);
+                }
+                return randomizedURLs;
+            }
+            // change this number to match the amount of sites in the list
+            genRandomList(myURLs.length, randomizedURLs);
+        }
+
+
+        // adds event listener to the surf button
+        (function() {
+            var button = document.getElementById("surfButton");
+            var trickButton = document.getElementById('trickButton');
+            button.addEventListener("click", function() {
+                // surf is what runs after a new list has been generated
+                surf();
+            });
+            trickButton.addEventListener("click", trick);
+        })();
+
+        function surf() {
+            document.getElementById('startingDiv').style.display = "none";
+            var dice = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            var rand = Math.floor(Math.random() * 10);
+            if (randomizedURLs.length > 0) {
+                console.log(randomizedURLs.at(-1));
+                var selectedURL = randomizedURLs.pop();
+                document.getElementById("viewport").src = selectedURL;
+                var link = document.getElementById('link');
+                link.setAttribute("href", selectedURL);
+                console.log("length is " + randomizedURLs.length);
+            } else {
+                // ran out of sites
+                console.log("ran out of sites");
+                document.getElementById("viewport").src = "https://sadhost.neocities.org/halloween/trick-or-treat-outro.html";
+                //generateRandomList();https://sadhost.neocities.org/halloween/trick-or-treat-outro.html
+                //surf();
+            }
+
+            if (dice[rand] === 10) {
+                // displays the trick button
+                document.getElementById('surfButton').style.display = "none";
+                document.getElementById('trickButton').style.display = "block";
+            }
+
+        }
+
+        function trick() {
+            var tricksArr = [
+                "https://i.kym-cdn.com/entries/icons/facebook/000/006/907/ugly.jpg",
+                "https://sadhost.neocities.org/halloween/tricks/win10.html",
+                "https://sadhost.neocities.org/halloween/tricks/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up%20(Official%20Music%20Video).mp4",
+                "https://sadhost.neocities.org/halloween/tricks/buttonhover.html"
+            ];
+
+            var shuffledTricks = shuffle(tricksArr);
+
+
+            // document.getElementById("viewport").src = "https://i.kym-cdn.com/entries/icons/facebook/000/006/907/ugly.jpg";
+            var selectedURL = shuffledTricks.pop();
+            document.getElementById("viewport").src = selectedURL;
+            var link = document.getElementById('link');
+            link.setAttribute("href", selectedURL);
+
+            // displays the treat icon again
+            document.getElementById('trickButton').style.display = "none";
+            document.getElementById('surfButton').style.display = "block";
+            console.log(shuffledTricks);
+        }
+
+        function shuffle(urlArr) {
+            let currentIndex = urlArr.length,
+                randomIndex;
+
+            // while there are items left to shuffle...
+            while (currentIndex != 0) {
+                // pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+
+                // decrease
+                currentIndex--;
+
+                // swap with current element
+                [urlArr[currentIndex], urlArr[randomIndex]] = [urlArr[randomIndex], urlArr[currentIndex]];
+            }
+            return urlArr;
+        }
+    </script>
+</body>
+
+</html>

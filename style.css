@@ -48,7 +48,7 @@ body {
     padding: 0;
     font-size: var(--font-size);
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 body {
@@ -96,10 +96,9 @@ body a {
     max-width: 1250px;
     color: white;
     background-color: var(--purple);
-    height: 140px;
-    padding-left: 60px;
+    height: 110px;
+    padding-left: 30px;
     margin-left: 0px;
-    padding-top: 20px;
     /*background-image: url('/img/bloo-header.png')*/
 }
 
@@ -117,7 +116,6 @@ nav ul {
     margin: 0;
     display: block;
     padding-left: 10px;
-    width: 150px;
 
 }
 
@@ -125,23 +123,24 @@ nav {
     font-weight: bold;
     width: 370px;
     margin-left: 0px;
-    padding-left: 60px;
+    padding-left: 30px;
     background-color: var(--nav-bg);
     background-image: url('/img/sidebar.png');
     background-repeat: repeat-y;
     background-size: 20%;
     background-position: top right;
     padding-top: 30px;
+    flex-grow: 1;
 }
 
 nav li {
-    display: inline-block;
+    display: block;
     margin-bottom: 0;
 }
 
 nav ul li a {
     text-decoration: none;
-    display: inline-block;
+    display: block;
     line-height: 1em;
     color: white;
     padding-top: 5px;
@@ -182,7 +181,9 @@ h1 {
 h2 {
     font-size: 25px;
     font-weight: bold;
-    color: var(--pink);
+    color: var(--readable-bluish);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--readable-bluish);
 }
 
 summary {
@@ -197,6 +198,8 @@ summary {
     padding: 80px;
     padding-top: 20px;
     position: relative;
+    height: 100%;
+
 }
 
 /* all pages */
@@ -221,7 +224,6 @@ nav {
 
 .content {
     background-color: var(--window-color);
-    height: auto;
     background-size: 100%;
     color: #d1c7dd;
     border-bottom: none;
@@ -269,6 +271,12 @@ h2 {
     margin-top: 30px;
     border-top-left-radius: 20px;
 
+}
+
+main {
+    background-color: black;
+    height: 100%;
+    min-height: calc(100vh - 110px);
 }
 
 body::-webkit-scrollbar-track {
@@ -393,6 +401,7 @@ hr {
     main {
         max-width: 100%;
         margin-right: 0;
+        height: 100%;
     }
 
 
@@ -403,6 +412,7 @@ hr {
 
     .content {
         padding: 10px;
+        height: 100%;
     }
 
     .logo img {
